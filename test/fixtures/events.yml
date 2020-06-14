@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  event_flag: false
+  user: one
+  private: false
+  resource: one
+  location: MyString
+  date: 2020-05-09 21:07:36
+
+two:
+  title: MyString
+  description: MyText
+  event_flag: false
+  user: two
+  private: false
+  resource: two
+  location: MyString
+  date: 2020-05-09 21:07:36

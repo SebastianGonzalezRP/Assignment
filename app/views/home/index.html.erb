@@ -1,0 +1,61 @@
+
+<div class="col-md-12" id="center-div-home-image">
+  <%=image_tag("ph2.jpg", alt: "Home photo", width: "100%")%>
+</div>
+
+<div class="row ml-0 mt-3" id="div-principal-text">
+  <div>
+    <h1>Upcoming Events!</h1>
+    <p>Here we have a small selection of the events that will take place.</p>
+  </div>
+</div>
+
+<div class="row">
+  <% @events.each_with_index do |event, i| %>
+    <div class="col-md-4" id="center-div-home">
+      <div class="card mb-4 shadow-sm">
+        <%= image_tag("thumbnail.svg", class: "card-img-top", width: "100%", background: "#55595c", color: "#eceeef") %>
+        <div class="card-body">
+          <p class="card-text"><%= link_to event.title, event %></p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-info"><%= link_to "View", event %></button>
+            <button type="button" class="btn btn-sm btn-outline-warning"><%= link_to "Edit", edit_event_path(event) %></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="card-group" id="comments-home">
+  <div class="card" id="text-comments-home">
+    <%=image_tag("imagen1.jpg", alt: "Home photo", width: "100%")%>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.
+      </p>
+      <p class="card-text"><small class="text-dark">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card" id="text-comments-home">
+    <%=image_tag("imagen2.jpg", alt: "Home photo", width: "100%")%>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-dark">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card" id="text-comments-home">
+    <%=image_tag("imagen3.jpeg", alt: "Home photo", width: "100%")%>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        This is a wider card with supporting text below as a natural lead-in to additional content.
+        This card has even longer content than the first to show that equal height action.
+      </p>
+      <p class="card-text"><small class="text-dark">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>

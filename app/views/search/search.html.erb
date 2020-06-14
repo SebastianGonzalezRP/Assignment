@@ -1,0 +1,33 @@
+<p> Search page</p>
+
+<%if @organization!=nil %>
+  <label>Organizacion</label>
+  <ul>
+    <%@organization.each do |o| %>
+      <li> <%=o.name %></li>
+    <%end %>
+
+  </ul>
+<%end %>
+
+
+<%if @profile!=nil or @user!=nil %>
+  <label>Perfiles</label>
+  <ul>
+    <%@profile.each do |p| %>
+      <li> <%=p.name %></li>
+    <%end %>
+    <%@user.each do |u| %>
+      <li> <%=u.profile.name %></li>
+    <% end %>
+  </ul>
+<%end %>
+
+<%if @eventCreator!=nil %>
+  <label>Event</label>
+  <ul>
+    <%@eventCreator.each do |e| %>
+      <li> <%=e.title %></li>
+    <%end %>
+  </ul>
+<%end %>

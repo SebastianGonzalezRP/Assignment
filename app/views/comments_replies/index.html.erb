@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comments Replies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments_replies.each do |comments_reply| %>
+      <tr>
+        <td><%= link_to 'Show', comments_reply %></td>
+        <td><%= link_to 'Edit', edit_comments_reply_path(comments_reply) %></td>
+        <td><%= link_to 'Destroy', comments_reply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comments Reply', new_comments_reply_path %>

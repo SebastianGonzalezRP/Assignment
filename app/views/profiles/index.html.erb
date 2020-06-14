@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row ml-0 mt-3" id="div-principal-text">
+  <div>
+    <h1>Profiles</h1>
+    <p>In this section we can find all the profiles there are, we can see the title along with its description.
+      Pressing each profile leads us to the profile page where we can see your photos and a greater amount of information
+    </p>
+    <p>
+      You can press the name of the profile or the button view for go to the view of that profile. With the button edit
+      (the logged used is an administrator) can edit all of that profiles.
+    </p>
+  </div>
+</div>
+
+
+<div class="list-group" id="profiles_list">
+  <div class="row">
+    <div class="col-10">
+      <table class="table table-striped table-dark">
+        <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Last Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @profiles.each do |profile| %>
+            <tr>
+              <td><%= link_to profile.name, profile %></td>
+              <td><%= profile.last_name %></td>
+              <td> <button type="button" class="btn btn-outline-info"><%= link_to "View", profile %></button> </td>
+              <td> <button type="button" class="btn btn-outline-warning"><%= link_to "Edit", edit_profile_path(profile) %></button> </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Entrega3Proyecto</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  </head>
+  <body >
+  <header>
+    <h1><%= link_to "Meet Up", root_path %></h1>
+  </header>
+  <div class="container" >
+    <div class="row">
+      <div class="col-sm-8">
+        <nav>
+          <ul id="navbar">
+            <li><%= link_to "HOME", root_path %></li>
+            <li><%= link_to "Events", events_path %></li>
+            <li><%= link_to "Profile", profiles_path %></li>
+            <li><%= link_to "Organizations", organizations_path %></li>
+            <li><%= link_to "Account",  account_path %></li>
+            <li><%= link_to "Log Out" %></li>
+            <li><%= link_to "'WELCOME! " + @current_profile + "'" %></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-sm-4">
+        <form class="form-inline" action="/search" method="get">
+          <input class="form-control mr-sm-2" type="text" name="q"  placeholder="Search" aria-label="Search">
+
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><%= link_to "Search"%></button>
+        </form>
+      </div>
+    </div>
+  </div>
+    <div id="container">
+      <main id="main_content">
+        <% if notice.present? %>
+          <div class="row ml-0 mt-3">
+            <div id="notice" class="alert alert-success"><%= notice %></div>
+          </div>
+        <% end %>
+        <% if alert.present? %>
+          <div class="row ml-0 mt-3" role="alert">
+            <div id="alert" class="alert alert-danger"><%= alert %></div>
+          </div>
+        <% end %>
+        <%= yield %>
+      </main>
+    </div>
+    <footer>
+      <h4>
+        Contact Information
+      </h4>
+      <p>Contact us at: bigbangevents@gmail.com</p>
+    </footer>
+  </body>
+</html>

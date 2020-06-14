@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row ml-0 mt-3" id="div-principal-text">
+  <div>
+    <h1>Events</h1>
+    <p>In this section we can find all the events there are, we can see the title along with its description.
+      Pressing each event leads us to the event page where we can see your photos and a greater amount of information
+    </p>
+    <p>
+      We can create events with the add button
+    </p>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="btn-group">
+      <button class="btn btn-success btn-lg" id="add-button"><%= link_to "Add", new_event_path%></button>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <% @events.each do |event| %>
+    <div class="col-md-4" id="center-div-home">
+      <div class="card mb-4 shadow-sm">
+        <%= image_tag("thumbnail.svg", class: "card-img-top", width: "100%", background: "#55595c", color: "#eceeef") %>
+        <div class="card-body">
+          <p class="card-text"><%= link_to event.title, event %></p>
+          <p class="card-text" id="text-div-black"><%= event.description %></p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-info"><%= link_to "View", event %></button>
+            <button type="button" class="btn btn-sm btn-outline-warning"><%= link_to "Edit", edit_event_path(event) %></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

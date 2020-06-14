@@ -1,0 +1,207 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #000000
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fbfffd;
+}
+
+a {
+    color: #ff6514;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff2121;
+}
+
+header {
+    padding: 1em;
+    height: 75px;
+}
+
+div#container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+}
+
+aside#customer_info {
+    width: 20%;
+    background-color: #f0f0f0;
+    padding: 1em;
+}
+
+main {
+    padding: 1em;
+    width: 80%;
+}
+
+footer {
+    color: white;
+    background: #333;
+    padding: 1em;
+    height: 6em;
+}
+
+ul#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+ul#navbar li {
+    float: left;
+}
+
+ul#navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+ul#navbar li a:hover {
+    background-color: #111;
+}
+
+td,th {
+    padding: 0.2em;
+    text-align: left;
+}
+
+/*
+nuestro css e3
+ */
+.col-10 {
+    height:350px;
+    overflow-y: scroll;
+}
+#profiles_list{
+    position: relative;
+    left: 17%;
+}
+#profile-view{
+    display: block;
+    position: relative;
+    left: 10%;
+}
+#profile-scroll{
+    height: 300px;
+    overflow-y: scroll;
+}
+#second-div-show-organization{
+    position: relative;
+    left: 11.5%;
+}
+
+/******************************************************
+EVENT SHOW
+ */
+#event-show-div-1{
+    position: relative;
+    left: 11.5%;
+    color: black;
+    background: white;
+}
+#event-show-div-2{
+    position: relative;
+    left: 11.5%;
+    background: white;
+}
+#event-show-div-3{
+    position: relative;
+    left: 11.5%;
+    background: white;
+}
+#div-event-list-user{
+    background: #4e555b;
+    color: white;
+}
+#div-comments-event{
+    background: #4e555b;
+}
+/******************************************************
+ */
+
+
+#gris-background{
+    background: rgba(78, 85, 91, 0.94);
+}
+
+p {
+    font-family: cursive;
+}
+#black-text{
+    color: black;
+}
+#add-button{
+    color: white;
+}
+#div-principal-text{
+    padding: 5%;
+}
+#comments-home{
+    position: relative;
+    left: 12%;
+}
+#text-comments-home{
+    color: #2e2e2e;
+    background: #e0e1e2;
+}
+#centre-data-profile{
+    position: relative;
+    left: 11%;
+}
+
+
+#first-div-particular-event{
+    position: relative;
+    left: 10%;
+}
+#second-div-particular-event{
+    position: relative;
+    left: 10%;
+}
+
+
+
+
+
+
+#div-test{
+    background: #1e7e34;
+}
+
+#text-div-black{
+    color: black;
+    font-family: Calibri;
+}
+#text-div-blue{
+    color: darkblue;
+    font-family: Courier New;
+}
+#center-div{
+    position: relative;
+    left: 47%;
+}
+#center-div-home{
+    position: relative;
+    left: 12%;
+}
+#center-div-home-image{
+    position: relative;
+    left: 13%;
+}

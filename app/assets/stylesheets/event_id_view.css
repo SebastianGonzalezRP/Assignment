@@ -1,0 +1,10 @@
+#delete_button_event{
+    background: red;
+}
+#add_button_event{
+    background: #029f04;
+}
+#back_button{
+    background: #363837;
+    color: #000000
+}

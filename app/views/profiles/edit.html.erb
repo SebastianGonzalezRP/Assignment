@@ -1,0 +1,42 @@
+<div class="row ml-0 mt-3" id="div-principal-text">
+  <div>
+    <h1>Editing Profile</h1>
+    <p>In this part of the web site you can update the data of profiles</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4" id="center-div">
+    <div class="card mb-4 shadow-sm">
+      <%= image_tag("thumbnail.svg", class: "card-img-top", width: "100%", background: "#55595c", color: "#eceeef") %>
+      <div class="card-body">
+        <%= form_with model: @profile do |form| %>
+          <div class="form-group" id="text-div-blue">
+            <%= form.label :name %>
+            <%= form.text_field :name, class: "form-control" %>
+          </div>
+          <div class="form-group" id="text-div-blue">
+            <%= form.label :last_name %>
+            <%= form.text_field :last_name, class: "form-control" %>
+          </div>
+          <div class="form-group" id="text-div-blue">
+            <%= form.label :date_of_birth %>
+            <%= form.datetime_local_field :dob %>
+          </div>
+          <div class="form-group" id="text-div-blue">
+            <%= form.label :phone %>
+            <%= form.text_field :phone %>
+          </div>
+          <div class="form-group" id="text-div-blue">
+            <%= form.label :address %>
+            <%= form.text_field :address %>
+          </div>
+          <div class="form-group">
+            <%= form.submit "Edit", class: ["btn", "btn-primary"] %>
+            <%= link_to "Back", :back, class: ["btn", "btn-secondary"] %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
